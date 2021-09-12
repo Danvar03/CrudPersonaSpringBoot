@@ -1,4 +1,4 @@
-package com.sofka.persona.entity;
+package com.sofka.persona.domaint.entity;
 
 import javax.persistence.*;
 

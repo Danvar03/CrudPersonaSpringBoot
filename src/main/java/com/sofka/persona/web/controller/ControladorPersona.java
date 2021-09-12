@@ -1,4 +1,4 @@
-package com.sofka.persona.controller;
+package com.sofka.persona.web.controller;
 
 import com.sofka.persona.domaint.entity.Persona;
 import com.sofka.persona.service.InferfasServiciosPersona;

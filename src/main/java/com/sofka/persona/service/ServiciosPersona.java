@@ -1,22 +1,20 @@
 package com.sofka.persona.service;
 
-import com.sofka.persona.entity.Persona;
-import com.sofka.persona.repository.InterfacesRepositorioPersona;
+import com.sofka.persona.domaint.entity.Persona;
+import com.sofka.persona.dao.repository.InterfacesRepositorioPersona;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
+
 
 @Service
-public class ServiciosPersona implements  InferfasServiciosPersona{
+public class ServiciosPersona implements InferfasServiciosPersona {
+
 
     @Autowired
     private InterfacesRepositorioPersona data;
-
-    @Override
-    public Persona crear(Persona persona) {
-        return data.save(persona);
-    }
 
     @Override
     public List<Persona> listar() {
@@ -24,22 +22,29 @@ public class ServiciosPersona implements  InferfasServiciosPersona{
     }
 
     @Override
-    public Persona ListerId(int id) {
-        return null;
+    public Optional<Persona> ListId(int id) {
+        return Optional.empty();
     }
 
     @Override
-    public Persona guardar(Persona persona) {
+    public Persona crear(Persona persona) {
         return data.save(persona);
     }
 
     @Override
     public void borrar(int id) {
-       data.deleteById(id);
+        data.deleteById(id);
+
     }
 
     @Override
     public Persona actualizar(Persona persona) {
-        return null;
+        return data.save(persona);
     }
 }
+
+
+
+
+
+
