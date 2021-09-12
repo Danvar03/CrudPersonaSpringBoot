@@ -14,6 +14,11 @@ public class ServiciosPersona implements  InferfasServiciosPersona{
     private InterfacesRepositorioPersona data;
 
     @Override
+    public Persona crear(Persona persona) {
+        return data.save(persona);
+    }
+
+    @Override
     public List<Persona> listar() {
         return (List<Persona>) data.findAll();
     }
@@ -30,7 +35,7 @@ public class ServiciosPersona implements  InferfasServiciosPersona{
 
     @Override
     public void borrar(int id) {
-
+       data.deleteById(id);
     }
 
     @Override

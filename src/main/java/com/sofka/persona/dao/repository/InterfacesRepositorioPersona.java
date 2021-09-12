@@ -1,6 +1,6 @@
 package com.sofka.persona.repository;
 
-import com.sofka.persona.entity.Persona;
+import com.sofka.persona.domaint.entity.Persona;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
